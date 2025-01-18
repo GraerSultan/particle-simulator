@@ -77,6 +77,9 @@ function ball(radius, x, y, dx, dy, color)
                 ballTemp.x -= overlapX;
                 ballTemp.y -= overlapY;
 
+                var canvas = document.getElementById("simulationCanvas");
+                var context = canvas.getContext("2d");
+                
                 this.moveObject(dx, dy);
                 ballTemp.moveObject(dx, dy);
             }
