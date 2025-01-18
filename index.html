@@ -24,7 +24,6 @@
 
   <script>
     var balls = [];
-    var density = 0;
     var counter = 0;
 
     // Ball Constructor
@@ -125,7 +124,6 @@
     // Main Simulation Loop
     function tick() {
       counter++;
-      density = 0;
       context.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
 
       // Update and draw each ball
@@ -133,12 +131,6 @@
         balls[i].move();
         balls[i].collisionDetection();
         balls[i].create(context);
-      }
-
-      // Log density every 100 frames
-      if (counter % 100 === 0) {
-        counter = 0;
-        console.log('Density:', density);
       }
     }
 
